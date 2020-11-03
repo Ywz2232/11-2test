@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Ywz2232/11-2test.git
+          search-paths: config
+          default-label: master
+  application:
+    name: config-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+
+server:
+  port: 6001

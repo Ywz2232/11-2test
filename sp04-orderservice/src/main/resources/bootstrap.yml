@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+
+spring:
+  cloud:
+    config:
+      discovery:
+        service-id: config-server
+        enabled: true
+      name: order-service
+      profile: dev
